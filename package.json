@@ -1,0 +1,14 @@
+{
+  "name": "water-reminder-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot for water drinking reminders",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-cron": "^3.0.0",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
