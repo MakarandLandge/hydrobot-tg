@@ -1,13 +1,10 @@
-  require("dotenv").config();
+require("dotenv").config();
+const http = require("http");
+http.createServer((req, res) => res.end("HydroBot is running!")).listen(process.env.PORT || 3000);
+
 const TelegramBot = require("node-telegram-bot-api");
 const cron = require("node-cron");
 const fs = require("fs");
-
-const TOKEN = process.env.BOT_TOKEN;
-const bot = new TelegramBot(TOKEN, { polling: true });
-
-const http = require("http");
-http.createServer((req, res) => res.end("HydroBot is running!")).listen(process.env.PORT || 3000);
 
 // ─── Data Storage ───────────────────────────────────────────────
 const DATA_FILE = "./data.json";
