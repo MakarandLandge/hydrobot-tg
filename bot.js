@@ -6,6 +6,9 @@ const TelegramBot = require("node-telegram-bot-api");
 const cron = require("node-cron");
 const fs = require("fs");
 
+const TOKEN = process.env.BOT_TOKEN;
+const bot = new TelegramBot(TOKEN, { polling: true });
+
 // ─── Data Storage ───────────────────────────────────────────────
 const DATA_FILE = "./data.json";
 
