@@ -182,6 +182,7 @@ bot.on("callback_query", (query) => {
           keyboard: [
             ["💧 100ml", "💧 250ml", "💧 500ml"],
             ["📊 Status", "💬 Motivate", "🔄 Reset"],
+            ["⏸ Pause Reminders", "▶️ Resume Reminders"],
           ],
           resize_keyboard: true,
         },
@@ -203,6 +204,8 @@ bot.on("message", (msg) => {
     "📊 Status": "/status",
     "💬 Motivate": "/motivate",
     "🔄 Reset": "/reset",
+    "⏸ Pause Reminders": "/stopreminder",
+    "▶️ Resume Reminders": "/startreminder",
   };
 
   if (map[text]) {
